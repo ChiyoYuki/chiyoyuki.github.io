@@ -54,7 +54,7 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/aino_sns_icon1.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "千代有希",
+	name: "千代有希=>",
 	bio: "ignoramus et ignorabimus",
 	links: [
 		// {
