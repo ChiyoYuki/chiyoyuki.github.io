@@ -51,7 +51,6 @@ export const navBarConfig: NavBarConfig = {
     {
       name: "笔记",
       url: "/note/",
-      external: true,
     },
 		{
 			name: "GitHub",
