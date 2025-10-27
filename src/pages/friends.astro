@@ -5,6 +5,8 @@ import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
+import Waline from '../components/Waline.astro';
+
 const friendsPost = await getEntry("spec", "friends");
 
 if (!friendsPost) {
@@ -19,6 +21,13 @@ const items = [
     desc: "一只可爱小猫",
     siteurl: "https://axi404.top",
     tags: ["阿汐"],
+    },
+    {
+    title: "Eric's Blog",
+    imgurl: "https://zhao20060708.github.io/img/avatar_hu_41742121d310973e.png",
+    desc: "热爱生活",
+    siteurl: "https://zhao20060708.github.io",
+    tags: ["Eric"],
   },
 ];
 ---
@@ -99,4 +108,7 @@ const items = [
     });
   </script>
   <!--在此处👆插入随机排列JS脚本 -->
+
+  <Waline path="/friends" />
+
 </MainGridLayout>

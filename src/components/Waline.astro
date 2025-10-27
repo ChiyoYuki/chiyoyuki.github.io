@@ -49,6 +49,11 @@ const { class: className } = Astro.props
 </script>
 
 <style>
+  :root {
+    --waline-theme-color: #b5c4ff;
+    --waline-active-color: #c5d4ff;
+  }
+
   :global(.dark) #waline {
     --waline-bg-color: var(--card-bg);
     --waline-bg-color-light: var(--btn-plain-bg-hover);

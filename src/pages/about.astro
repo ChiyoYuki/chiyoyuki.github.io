@@ -6,6 +6,8 @@ import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
+import Waline from '../components/Waline.astro';
+
 const aboutPost = await getEntry("spec", "about");
 
 if (!aboutPost) {
@@ -22,4 +24,6 @@ const { Content } = await render(aboutPost);
             </Markdown>
         </div>
     </div>
+
+    <Waline path="/about" />
 </MainGridLayout>
