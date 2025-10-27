@@ -19,9 +19,9 @@ I wanna be the best programmer and the worst program, and don't wanna be a borin
 
 这是我使用 [Fuwari](https://github.com/saicaca/fuwari) 搭建的博客，争取每周上来写点什么。
 
-### 那些隐没的过往
-
 ::github{repo="saicaca/fuwari"}
+
+### 那些隐没的过往
 
 | 时间          | 采用方案                                                                                         |
 | ------------- | ------------------------------------------------------------------------------------------------ |

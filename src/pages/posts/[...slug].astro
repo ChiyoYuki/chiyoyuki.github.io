@@ -14,6 +14,8 @@ import PostMetadata from "../../components/PostMeta.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
 
+import Waline from '../../components/Waline.astro';
+
 export async function getStaticPaths() {
 	const blogEntries = await getSortedPosts();
 	return blogEntries.map((entry) => ({
@@ -26,6 +28,10 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 
 const { remarkPluginFrontmatter } = await entry.render();
+
+// 计算当前文章用于 Waline 的唯一 thread key / path
+// 推荐使用站内的文章路径（getPostUrlBySlug 会返回相对 url），确保不同文章唯一
+const postPathForWaline = getPostUrlBySlug(entry.slug);
 
 const jsonLd = {
 	"@context": "https://schema.org",
@@ -107,6 +113,15 @@ const jsonLd = {
             </Markdown>
 
             {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
+
+            <!-- 在文章正文/License 之后插入 Waline 评论组件 -->
+            <!-- 传入 serverURL（可从环境变量读取）和 path（确保为本页唯一标识） -->
+            <Waline
+              serverURL={import.meta.env.PUBLIC_WALINE_SERVER}
+              path={postPathForWaline}
+              class="mb-6 rounded-xl onload-animation"
+            />
+            <!-- 若你使用的是之前 assistant 给出的 Comment.astro，请把上面 <Waline ... /> 换成 <Comment ... /> 并调整 import -->
 
         </div>
     </div>
