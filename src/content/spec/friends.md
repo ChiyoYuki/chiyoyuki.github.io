@@ -4,7 +4,7 @@
 {
   title: "空と海-千代有希のブログ",
   imgurl: "https://gravatar.com/avatar/ac3d325212c82a0bed5aac65b37da52e?s=1024",
-  desc: "就算活着沒有意義，偶爾還是會碰到好事的。",
+  desc: "就算活著沒有意義，偶而還是會碰到好事的。",
   siteurl: "https://chiyoyuki.uk",
 }
 ```
