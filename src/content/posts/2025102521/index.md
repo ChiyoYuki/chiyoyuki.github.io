@@ -1,7 +1,7 @@
 ---
-title: 学习记录Week6
+title: 2025秋06周周记
 published: 2025-10-25
-description: ""
+description: "你好，Fuwari"
 image: "./cover.jpg"
 tags: []
 category: "周记"
@@ -77,4 +77,6 @@ lang: ""
 
 计划是从下周开始恢复单词背诵，主要使用电脑端 anki ，将日常工作流重心迁移到电脑上，同时养成记博客的习惯。
 
-lastupd:202510261718
+lastupd:2025102900
+
+> 本文封面为作品[anemoi](https://key.visualarts.gr.jp/anemoi/)中的[CG？](https://key.visualarts.gr.jp/anemoi/gallery.html)
