@@ -1,6 +1,7 @@
 ---
 title: 若能化作蒲公英
-published: 2025-10-28
+published: 2025-10-28T23:00:00+08:00
+updated: 2025-10-29T23:36:52+08:00
 description: "逃避主义者的自我反思"
 image: "./cover.png"
 tags: []

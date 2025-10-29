@@ -1,6 +1,7 @@
 ---
 title: 2025秋06周周记
-published: 2025-10-25
+published: 2025-10-25T21:00:00+08:00
+updated: 2025-10-29T23:37:57+08:00
 description: "你好，Fuwari"
 image: "./cover.jpg"
 tags: []
@@ -76,7 +77,5 @@ lang: ""
 这个也是一点没学，平板背 anki 确实还是有些难受。
 
 计划是从下周开始恢复单词背诵，主要使用电脑端 anki ，将日常工作流重心迁移到电脑上，同时养成记博客的习惯。
-
-lastupd:2025102900
 
 > 本文封面为作品[anemoi](https://key.visualarts.gr.jp/anemoi/)中的[CG？](https://key.visualarts.gr.jp/anemoi/gallery.html)
