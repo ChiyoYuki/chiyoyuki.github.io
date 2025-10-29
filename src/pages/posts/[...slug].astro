@@ -16,11 +16,11 @@ import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDDhhmmss } from "../../utils/date-utils";
 
 export async function getStaticPaths() {
-    const blogEntries = await getSortedPosts();
-    return blogEntries.map((entry) => ({
-        params: { slug: entry.slug },
-        props: { entry },
-    }));
+	const blogEntries = await getSortedPosts();
+	return blogEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
 }
 
 const { entry } = Astro.props;
@@ -33,21 +33,21 @@ const { remarkPluginFrontmatter } = await entry.render();
 const postPathForWaline = getPostUrlBySlug(entry.slug);
 
 const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: entry.data.title,
-    description: entry.data.description || entry.data.title,
-    keywords: entry.data.tags,
-    author: {
-        "@type": "Person",
-        name: profileConfig.name,
-        url: Astro.site,
-    },
-    datePublished: formatDateToYYYYMMDDhhmmss(entry.data.published),
-    inLanguage: entry.data.lang
-        ? entry.data.lang.replace("_", "-")
-        : siteConfig.lang.replace("_", "-"),
-    // TODO include cover image here
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: entry.data.title,
+	description: entry.data.description || entry.data.title,
+	keywords: entry.data.tags,
+	author: {
+		"@type": "Person",
+		name: profileConfig.name,
+		url: Astro.site,
+	},
+	datePublished: formatDateToYYYYMMDDhhmmss(entry.data.published),
+	inLanguage: entry.data.lang
+		? entry.data.lang.replace("_", "-")
+		: siteConfig.lang.replace("_", "-"),
+	// TODO include cover image here
 };
 ---
 

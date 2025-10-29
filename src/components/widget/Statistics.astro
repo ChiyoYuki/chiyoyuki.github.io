@@ -2,71 +2,74 @@
 
 // 本代码文件来自于 https://github.com/Pinpe/Pinpe-top
 
-import WidgetLayout from './WidgetLayout.astro'
-import { getSortedPosts } from '../../utils/content-utils'
-import { Icon } from 'astro-icon/components'
+import WidgetLayout from "./WidgetLayout.astro";
+import { getSortedPosts } from "../../utils/content-utils";
+import { Icon } from "astro-icon/components";
 
-function formatTimeAgo(date) {
-    const now = new Date();
-    const diffMs = now - date;
-    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-    if (days == 0){
-      return `今天`;
-    }
-    return `${days}天前`;
+function formatTimeAgo(date: Date) {
+	let now = new Date();
+	let diffMs = now - date;
+	let days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+	if (days == 0) {
+		return `今天`;
+	}
+	return `${days}天前`;
 }
 
-function formatWordsCount(words) {
-    if (words >= 10000) {
-        return (words / 10000).toFixed(1) + '万';
-    } else if (words >= 1000) {
-        return (words / 1000).toFixed(1) + '千';
-    }
-    return words + '';
+function formatWordsCount(words: number) {
+	if (words >= 10000) {
+		return (words / 10000).toFixed(1) + "万";
+	} else if (words >= 1000) {
+		return (words / 1000).toFixed(1) + "千";
+	}
+	return words + "";
 }
 
 // 字数统计方法（支持中英文混排，中文算1字，英文/数字/符号以空格分词）
 function countWords(text = "") {
-    // 统计中文字符
-    const cn = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
-    // 统计英文单词/数字
-    const en = (text.replace(/[\u4e00-\u9fa5]/g, '').match(/\b\w+\b/g) || []).length;
-    return cn + en;
+	// 统计中文字符
+	const cn = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
+	// 统计英文单词/数字
+	const en = (text.replace(/[\u4e00-\u9fa5]/g, "").match(/\b\w+\b/g) || [])
+		.length;
+	return cn + en;
 }
 
 // 运营时长计算
-function formatDuration(from, to) {
-    let years = to.getFullYear() - from.getFullYear();
-    let months = to.getMonth() - from.getMonth();
-    let days = to.getDate();
-    if(to.getDate() < from.getDate()) {
-        months -= 1;
-        const prevMonth = new Date(to.getFullYear(), to.getMonth(), 1).getDate() - from.getDate();        
-    }
-    else {
-      days -= from.getDate();
-    }
-    if (months < 0) {
-        years -= 1;
-        months += 12;
-    }
-    return `${years}年${months}月${days}日`;
+function formatDuration(from: Date, to: Date) {
+	let years = to.getFullYear() - from.getFullYear();
+	let months = to.getMonth() - from.getMonth();
+	let days = to.getDate();
+	if (to.getDate() < from.getDate()) {
+		months -= 1;
+		const prevMonth =
+			new Date(to.getFullYear(), to.getMonth(), 1).getDate() - from.getDate();
+	} else {
+		days -= from.getDate();
+	}
+	if (months < 0) {
+		years -= 1;
+		months += 12;
+	}
+	return `${years}年${months}月${days}日`;
 }
 
 const posts = await getSortedPosts();
-const totalPosts = posts.length + '篇';
+const totalPosts = posts.length + "篇";
 let latestPost = posts[0];
 let totalWords = 0;
 
 for (const post of posts) {
-    totalWords += countWords(post.body || "");
+	totalWords += countWords(post.body || "");
 }
 if (posts.length > 0) {
-    latestPost = posts.reduce((a, b) =>
-        new Date(a.data.published) > new Date(b.data.published) ? a : b
-    );
+	latestPost = posts.reduce((a, b) =>
+		new Date(a.data.published) > new Date(b.data.published) ? a : b,
+	);
 }
-const lastUpdate = latestPost ? formatTimeAgo(new Date(latestPost.data.published)) : '无';
+const lastUpdate = latestPost
+	? formatTimeAgo(new Date(latestPost.data.published))
+	: "无";
 const wordsString = formatWordsCount(totalWords);
 
 const siteStartDate = new Date("2025-10-25");
