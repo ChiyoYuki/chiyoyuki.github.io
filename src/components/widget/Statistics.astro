@@ -6,17 +6,17 @@ import WidgetLayout from './WidgetLayout.astro'
 import { getSortedPosts } from '../../utils/content-utils'
 import { Icon } from 'astro-icon/components'
 
-function formatTimeAgo(date) {
-    const now = new Date();
-    const diffMs = now - date;
-    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+function formatTimeAgo(date:Date) {
+    let now = new Date();
+    let diffMs = now - date;
+    let days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
     if (days == 0){
       return `今天`;
     }
     return `${days}天前`;
 }
 
-function formatWordsCount(words) {
+function formatWordsCount(words:number) {
     if (words >= 10000) {
         return (words / 10000).toFixed(1) + '万';
     } else if (words >= 1000) {
@@ -35,7 +35,7 @@ function countWords(text = "") {
 }
 
 // 运营时长计算
-function formatDuration(from, to) {
+function formatDuration(from:Date, to:Date) {
     let years = to.getFullYear() - from.getFullYear();
     let months = to.getMonth() - from.getMonth();
     let days = to.getDate();
