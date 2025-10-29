@@ -1,28 +1,28 @@
 ---
-
 // 本代码文件来自于 https://github.com/Pinpe/Pinpe-top
 
-import WidgetLayout from "./WidgetLayout.astro";
-import { getSortedPosts } from "../../utils/content-utils";
 import { Icon } from "astro-icon/components";
+import { getSortedPosts } from "../../utils/content-utils";
+import WidgetLayout from "./WidgetLayout.astro";
 
 function formatTimeAgo(date: Date) {
 	let now = new Date();
 	let diffMs = now - date;
 	let days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-	if (days == 0) {
-		return `今天`;
+	if (days === 0) {
+		return "今天";
 	}
 	return `${days}天前`;
 }
 
 function formatWordsCount(words: number) {
 	if (words >= 10000) {
-		return (words / 10000).toFixed(1) + "万";
-	} else if (words >= 1000) {
-		return (words / 1000).toFixed(1) + "千";
+		return `${(words / 10000).toFixed(1)}万`;
 	}
-	return words + "";
+	if (words >= 1000) {
+		return `${(words / 1000).toFixed(1)}千`;
+	}
+	return `${words}`;
 }
 
 // 字数统计方法（支持中英文混排，中文算1字，英文/数字/符号以空格分词）
@@ -55,7 +55,7 @@ function formatDuration(from: Date, to: Date) {
 }
 
 const posts = await getSortedPosts();
-const totalPosts = posts.length + "篇";
+const totalPosts = `${posts.length}篇`;
 let latestPost = posts[0];
 let totalWords = 0;
 
@@ -78,32 +78,47 @@ const runningDuration = formatDuration(siteStartDate, now);
 ---
 
 <WidgetLayout name="状态" id="statistics">
-  <div class="flex flex-col gap-2 ">
-    <!-- 文章总数行 -->
-    <div class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2">
-      <div class="flex items-center">
-        <Icon name="material-symbols:book-2-outline-rounded" class="text-[1.4rem] mr-2" />
-        <span>文章总数</span>
-      </div>
-      <span class="font-semibold text-[var(--primary)]">{totalPosts}</span>
-    </div>
+	<div class="flex flex-col gap-2">
+		<!-- 文章总数行 -->
+		<div
+			class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2"
+		>
+			<div class="flex items-center">
+				<Icon
+					name="material-symbols:book-2-outline-rounded"
+					class="text-[1.4rem] mr-2"
+				/>
+				<span>文章总数</span>
+			</div>
+			<span class="font-semibold text-[var(--primary)]">{totalPosts}</span>
+		</div>
 
-    <!-- 总字数行 -->
-    <div class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2">
-      <div class="flex items-center">
-        <Icon name="material-symbols:match-word-rounded" class="text-[1.4rem] mr-2" />
-        <span>总字数</span>
-      </div>
-      <span class="font-semibold text-[var(--primary)]">{wordsString}</span>
-    </div>
+		<!-- 总字数行 -->
+		<div
+			class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2"
+		>
+			<div class="flex items-center">
+				<Icon
+					name="material-symbols:match-word-rounded"
+					class="text-[1.4rem] mr-2"
+				/>
+				<span>总字数</span>
+			</div>
+			<span class="font-semibold text-[var(--primary)]">{wordsString}</span>
+		</div>
 
-    <!-- 运营时长行 -->
-    <div class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2 mb-1.5">
-      <div class="flex items-center">
-        <Icon name="material-symbols:calendar-clock-outline-rounded" class="text-[1.4rem] mr-2" />
-        <span>运营时长</span>
-      </div>
-      <span class="font-semibold text-[var(--primary)]">{runningDuration}</span>
-    </div>
-  </div>
+		<!-- 运营时长行 -->
+		<div
+			class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2 mb-1.5"
+		>
+			<div class="flex items-center">
+				<Icon
+					name="material-symbols:calendar-clock-outline-rounded"
+					class="text-[1.4rem] mr-2"
+				/>
+				<span>运营时长</span>
+			</div>
+			<span class="font-semibold text-[var(--primary)]">{runningDuration}</span>
+		</div>
+	</div>
 </WidgetLayout>
