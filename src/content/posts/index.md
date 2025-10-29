@@ -1,6 +1,6 @@
 ---
 title: index
-published: 2025-10-29
+published: 2025-10-27
 description: ""
 image: ""
 tags: []
