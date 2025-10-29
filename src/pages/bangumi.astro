@@ -3,104 +3,104 @@ import BangumiSection from "@/components/bangumi/BangumiSection.astro";
 import TabNav from "@/components/bangumi/TabNav.astro";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
 import type {
-  UserSubjectCollection,
-  UserSubjectCollectionResponse,
+	UserSubjectCollection,
+	UserSubjectCollectionResponse,
 } from "@/types/bangumi";
 
 //////////////// Bangumi 配置 ////////////////////////
 const bangumiConfig = {
-  username: "chiyoyuki", // 在这里配置你的Bangumi用户名
-  apiUrl: "https://api.bgm.tv",
-  categories: {
-    book: false,
-    anime: true,
-    music: false,
-    game: true,
-    real: false,
-  },
-  // 数据获取设置
-  pagination: {
-    limit: 50, // 每页获取数量
-    delay: 50, // 请求间隔毫秒数，避免频率限制
-    maxTotal: 1000, // 最大获取总数，防止无限循环（0=无限制）
-  },
+	username: "chiyoyuki", // 在这里配置你的Bangumi用户名
+	apiUrl: "https://api.bgm.tv",
+	categories: {
+		book: false,
+		anime: true,
+		music: false,
+		game: true,
+		real: false,
+	},
+	// 数据获取设置
+	pagination: {
+		limit: 50, // 每页获取数量
+		delay: 50, // 请求间隔毫秒数，避免频率限制
+		maxTotal: 1000, // 最大获取总数，防止无限循环（0=无限制）
+	},
 };
 ////////////////////////////////////////////////////
 
 // 分类映射
 const categoryMap = {
-  book: { id: "book", name: "书籍", subjectType: 1 },
-  anime: { id: "anime", name: "动画", subjectType: 2 },
-  music: { id: "music", name: "音乐", subjectType: 3 },
-  game: { id: "game", name: "游戏", subjectType: 4 },
-  real: { id: "real", name: "三次元", subjectType: 6 },
+	book: { id: "book", name: "书籍", subjectType: 1 },
+	anime: { id: "anime", name: "动画", subjectType: 2 },
+	music: { id: "music", name: "音乐", subjectType: 3 },
+	game: { id: "game", name: "游戏", subjectType: 4 },
+	real: { id: "real", name: "三次元", subjectType: 6 },
 };
 
 // 获取Bangumi数据的函数 - 支持分页获取所有数据
 async function fetchBangumiData(username: string, subjectType: number) {
-  try {
-    const { limit, delay, maxTotal } = bangumiConfig.pagination;
-    let offset = 0;
-    let allData: UserSubjectCollection[] = [];
-    let hasMore = true;
+	try {
+		const { limit, delay, maxTotal } = bangumiConfig.pagination;
+		let offset = 0;
+		let allData: UserSubjectCollection[] = [];
+		let hasMore = true;
 
-    console.log(
-      `[Bangumi] 开始获取用户 ${username} 的 subjectType ${subjectType} 数据...`,
-    );
+		console.log(
+			`[Bangumi] 开始获取用户 ${username} 的 subjectType ${subjectType} 数据...`,
+		);
 
-    while (hasMore) {
-      // 检查是否超过最大获取限制
-      if (maxTotal > 0 && allData.length >= maxTotal) {
-        console.log(`[Bangumi] 已达到最大获取限制 ${maxTotal}，停止获取`);
-        break;
-      }
+		while (hasMore) {
+			// 检查是否超过最大获取限制
+			if (maxTotal > 0 && allData.length >= maxTotal) {
+				console.log(`[Bangumi] 已达到最大获取限制 ${maxTotal}，停止获取`);
+				break;
+			}
 
-      const url = `${bangumiConfig.apiUrl}/v0/users/${username}/collections?subject_type=${subjectType}&limit=${limit}&offset=${offset}`;
+			const url = `${bangumiConfig.apiUrl}/v0/users/${username}/collections?subject_type=${subjectType}&limit=${limit}&offset=${offset}`;
 
-      console.log(`[Bangumi] 正在获取数据: ${url} (已获取: ${allData.length})`);
+			console.log(`[Bangumi] 正在获取数据: ${url} (已获取: ${allData.length})`);
 
-      const response = await fetch(url, {
-        headers: {
-          "User-Agent": "YuuOuRou Blog",
-          Accept: "application/json",
-        },
-      });
+			const response = await fetch(url, {
+				headers: {
+					"User-Agent": "YuuOuRou Blog",
+					Accept: "application/json",
+				},
+			});
 
-      if (!response.ok) {
-        console.warn(
-          `[Bangumi] 无法获取数据 (状态码: ${response.status}):`,
-          url,
-        );
-        break;
-      }
+			if (!response.ok) {
+				console.warn(
+					`[Bangumi] 无法获取数据 (状态码: ${response.status}):`,
+					url,
+				);
+				break;
+			}
 
-      const data = (await response.json()) as UserSubjectCollectionResponse;
-      const currentBatch = data.data || [];
+			const data = (await response.json()) as UserSubjectCollectionResponse;
+			const currentBatch = data.data || [];
 
-      if (currentBatch.length > 0) {
-        allData = allData.concat(currentBatch);
-        offset += limit;
+			if (currentBatch.length > 0) {
+				allData = allData.concat(currentBatch);
+				offset += limit;
 
-        // 如果本次获取的数据少于limit，说明已经是最后一页
-        if (currentBatch.length < limit) {
-          hasMore = false;
-        }
-      } else {
-        hasMore = false;
-      }
+				// 如果本次获取的数据少于limit，说明已经是最后一页
+				if (currentBatch.length < limit) {
+					hasMore = false;
+				}
+			} else {
+				hasMore = false;
+			}
 
-      // 添加延迟避免请求过于频繁
-      if (hasMore) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-      }
-    }
+			// 添加延迟避免请求过于频繁
+			if (hasMore) {
+				await new Promise((resolve) => setTimeout(resolve, delay));
+			}
+		}
 
-    console.log(`[Bangumi] 总共获取到 ${allData.length} 条数据`);
-    return allData;
-  } catch (error) {
-    console.error("[Bangumi] 获取数据时出错:", error);
-    return [];
-  }
+		console.log(`[Bangumi] 总共获取到 ${allData.length} 条数据`);
+		return allData;
+	} catch (error) {
+		console.error("[Bangumi] 获取数据时出错:", error);
+		return [];
+	}
 }
 
 // 获取所有启用分类的数据
@@ -110,29 +110,29 @@ const tabs: Array<{ id: string; name: string; count: number }> = [];
 console.log("[Bangumi] 🌐 从 API 获取数据");
 
 for (const [categoryKey, enabled] of Object.entries(bangumiConfig.categories)) {
-  if (enabled && categoryMap[categoryKey as keyof typeof categoryMap]) {
-    const categoryInfo = categoryMap[categoryKey as keyof typeof categoryMap];
-    try {
-      const data = await fetchBangumiData(
-        bangumiConfig.username,
-        categoryInfo.subjectType,
-      );
-      bangumiData[categoryKey] = data;
-      tabs.push({
-        id: categoryKey,
-        name: categoryInfo.name,
-        count: data.length,
-      });
-    } catch (error) {
-      console.error(`[Bangumi] 获取 ${categoryInfo.name} 数据失败:`, error);
-      bangumiData[categoryKey] = [];
-      tabs.push({
-        id: categoryKey,
-        name: categoryInfo.name,
-        count: 0,
-      });
-    }
-  }
+	if (enabled && categoryMap[categoryKey as keyof typeof categoryMap]) {
+		const categoryInfo = categoryMap[categoryKey as keyof typeof categoryMap];
+		try {
+			const data = await fetchBangumiData(
+				bangumiConfig.username,
+				categoryInfo.subjectType,
+			);
+			bangumiData[categoryKey] = data;
+			tabs.push({
+				id: categoryKey,
+				name: categoryInfo.name,
+				count: data.length,
+			});
+		} catch (error) {
+			console.error(`[Bangumi] 获取 ${categoryInfo.name} 数据失败:`, error);
+			bangumiData[categoryKey] = [];
+			tabs.push({
+				id: categoryKey,
+				name: categoryInfo.name,
+				count: 0,
+			});
+		}
+	}
 }
 
 const activeTab = tabs[0]?.id || "anime";

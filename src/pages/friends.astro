@@ -5,30 +5,30 @@ import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
-import Waline from '../components/Waline.astro';
+import Waline from "../components/Waline.astro";
 
 const friendsPost = await getEntry("spec", "friends");
 
 if (!friendsPost) {
-  throw new Error("Friends page content not found");
+	throw new Error("Friends page content not found");
 }
 
 const { Content } = await render(friendsPost);
 const items = [
-  {
-    title: "Axi's Blog",
-    imgurl: "https://axi404.top/avatar/avatar.png",
-    desc: "一只可爱小猫",
-    siteurl: "https://axi404.top",
-    tags: ["阿汐"],
-    },
-    {
-    title: "Eric's Blog",
-    imgurl: "https://zhao20060708.github.io/img/avatar_hu_41742121d310973e.png",
-    desc: "热爱生活",
-    siteurl: "https://zhao20060708.github.io",
-    tags: ["Eric"],
-  },
+	{
+		title: "Axi's Blog",
+		imgurl: "https://axi404.top/avatar/avatar.png",
+		desc: "一只可爱小猫",
+		siteurl: "https://axi404.top",
+		tags: ["阿汐"],
+	},
+	{
+		title: "Eric's Blog",
+		imgurl: "https://zhao20060708.github.io/img/avatar_hu_41742121d310973e.png",
+		desc: "热爱生活",
+		siteurl: "https://zhao20060708.github.io",
+		tags: ["Eric"],
+	},
 ];
 ---
 

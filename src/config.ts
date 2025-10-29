@@ -32,10 +32,10 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		// Leave this array empty to use the default favicon
 		{
-		  src: '/favicon/aino_sns_icon1.png',    // Path of the favicon, relative to the /public directory
-		//   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
-		//   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
-		}
+			src: "/favicon/aino_sns_icon1.png", // Path of the favicon, relative to the /public directory
+			//   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
+			//   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
+		},
 	],
 };
 
@@ -46,20 +46,20 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.About,
 		LinkPreset.Friends,
 		{
-      name: "Bangumi",
-      url: "/bangumi/",
-    },
-    LinkPreset.Notes,
+			name: "Bangumi",
+			url: "/bangumi/",
+		},
+		LinkPreset.Notes,
 		{
 			name: "GitHub",
 			url: "https://github.com/chiyoyuki/chiyoyuki.github.io", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
-    {
-      name: "🚇",
-      url: "https://www.travellings.cn/train.html",
+		{
+			name: "🚇",
+			url: "https://www.travellings.cn/train.html",
 			external: true, // Show an external link icon and will open in a new tab
-    },
+		},
 	],
 };
 

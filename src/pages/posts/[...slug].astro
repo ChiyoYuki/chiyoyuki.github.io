@@ -14,7 +14,7 @@ import PostMetadata from "../../components/PostMeta.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
 
-import Waline from '../../components/Waline.astro';
+import Waline from "../../components/Waline.astro";
 
 export async function getStaticPaths() {
 	const blogEntries = await getSortedPosts();
