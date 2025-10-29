@@ -36,6 +36,6 @@ export const th: Translation = {
 	[Key.publishedAt]: "เผยแพร่เมื่อ",
 	[Key.license]: "สัญญาอนุญาต",
 
-  [Key.friends]: "เพื่อน",
+	[Key.friends]: "เพื่อน",
 	[Key.notes]: "บันทึกย่อ",
 };

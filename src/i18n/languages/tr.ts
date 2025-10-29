@@ -36,6 +36,6 @@ export const tr: Translation = {
 	[Key.publishedAt]: "Yayınlanma:",
 	[Key.license]: "Lisans",
 
-  [Key.friends]: "Arkadaşlar",
+	[Key.friends]: "Arkadaşlar",
 	[Key.notes]: "Notlar",
 };

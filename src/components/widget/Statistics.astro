@@ -5,16 +5,6 @@ import { Icon } from "astro-icon/components";
 import { getSortedPosts } from "../../utils/content-utils";
 import WidgetLayout from "./WidgetLayout.astro";
 
-function formatTimeAgo(date: Date) {
-	let now = new Date();
-	let diffMs = now - date;
-	let days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-	if (days === 0) {
-		return "今天";
-	}
-	return `${days}天前`;
-}
-
 function formatWordsCount(words: number) {
 	if (words >= 10000) {
 		return `${(words / 10000).toFixed(1)}万`;
@@ -67,9 +57,6 @@ if (posts.length > 0) {
 		new Date(a.data.published) > new Date(b.data.published) ? a : b,
 	);
 }
-const lastUpdate = latestPost
-	? formatTimeAgo(new Date(latestPost.data.published))
-	: "无";
 const wordsString = formatWordsCount(totalWords);
 
 const siteStartDate = new Date("2025-10-25");

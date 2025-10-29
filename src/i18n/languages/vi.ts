@@ -36,6 +36,6 @@ export const vi: Translation = {
 	[Key.publishedAt]: "Đăng vào lúc",
 	[Key.license]: "Giấy phép bản quyền",
 
-  [Key.friends]: "Bạn",
+	[Key.friends]: "Bạn",
 	[Key.notes]: "Ghi chú",
 };
