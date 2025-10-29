@@ -51,12 +51,12 @@ export const navBarConfig: NavBarConfig = {
 		},
 		LinkPreset.Notes,
 		{
-			name: "GitHub",
+			icon: "fa6-brands:github",
 			url: "https://github.com/chiyoyuki/chiyoyuki.github.io", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 		{
-			name: "🚇",
+			icon: "fa6-solid:train-subway",
 			url: "https://www.travellings.cn/train.html",
 			external: true, // Show an external link icon and will open in a new tab
 		},
