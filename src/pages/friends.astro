@@ -1,11 +1,10 @@
 ---
 import { getEntry, render } from "astro:content";
 import Markdown from "@components/misc/Markdown.astro";
+import Waline from "../components/Waline.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
-
-import Waline from "../components/Waline.astro";
 
 const friendsPost = await getEntry("spec", "friends");
 
@@ -110,5 +109,4 @@ const items = [
   <!--在此处👆插入随机排列JS脚本 -->
 
   <Waline path="/friends" />
-
 </MainGridLayout>
