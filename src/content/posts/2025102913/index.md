@@ -5,7 +5,7 @@ description: "就这样在古城的校园里转呀转"
 image: "./cover.jpg"
 tags: ["日常", "🌶️", "南洋"]
 category: "花椒鸡蛋"
-draft: true
+draft: false
 lang: ""
 ---
 
