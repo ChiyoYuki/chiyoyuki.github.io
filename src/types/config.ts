@@ -89,6 +89,7 @@ export type BlogPostData = {
 	body: string;
 	title: string;
 	published: Date;
+	updated: Date;
 	description: string;
 	tags: string[];
 	draft?: boolean;
