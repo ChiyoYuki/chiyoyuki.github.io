@@ -46,7 +46,8 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.About,
 		LinkPreset.Friends,
 		{
-			name: "Bangumi",
+			icon: "fa6-solid:tv",
+			name: "ACGN",
 			url: "/bangumi/",
 		},
 		LinkPreset.Notes,
