@@ -1,34 +1,47 @@
 ---
-import { getEntry, render } from "astro:content";
-import Markdown from "@components/misc/Markdown.astro";
+import links from "public/links.json";
 import Waline from "../components/Waline.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
-import MainGridLayout from "../layouts/MainGridLayout.astro";
 
-const friendsPost = await getEntry("spec", "friends");
+// import config from 'virtual:config'
 
-if (!friendsPost) {
-	throw new Error("Friends page content not found");
-}
+import Markdown from "@components/misc/Markdown.astro";
+import FriendList from "@/components/links/FriendsList.astro";
+// import PageLayout from '@/layouts/CommonPage.astro'
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
 
-const { Content } = await render(friendsPost);
-const items = [
-	{
-		title: "Axi's Blog",
-		imgurl: "https://axi404.top/avatar/avatar.png",
-		desc: "一只可爱小猫",
-		siteurl: "https://axi404.top",
-		tags: ["阿汐"],
-	},
-	{
-		title: "Eric's Blog",
-		imgurl: "https://zhao20060708.github.io/img/avatar_hu_41742121d310973e.png",
-		desc: "热爱生活",
-		siteurl: "https://zhao20060708.github.io",
-		tags: ["Eric"],
-	},
+const headings = [
+  { depth: 2, slug: "common-links", text: "Common Links" },
+  { depth: 2, slug: "special-links", text: "Special Links" },
+  { depth: 2, slug: "apply-links", text: "Apply Links" },
 ];
+
+const { friends } = links;
+// const linksConf = config.integ.links
+const linksConf = {
+  // Friend logbook
+  logbook: [
+    { date: "2025-03-16", content: "Is there a leakage?" },
+    { date: "2025-03-16", content: "A leakage of what?" },
+    {
+      date: "2025-03-16",
+      content: "I have a full seat of water, like, full of water!",
+    },
+    { date: "2025-03-16", content: "Must be the water." },
+    { date: "2025-03-16", content: "Let's add that to the words of wisdom." },
+  ],
+  // Yourself link info
+  applyTip: [
+    { name: "Name", val: "空と海" },
+    { name: "Desc", val: "Null" },
+    { name: "Link", val: "https://chiyoyuki.uk" },
+    { name: "Avatar", val: "就算活著沒有意義，偶而還是會碰到好事的。" },
+  ],
+};
+
+const linkEditPage =
+  "https://github.com/ChiyoYuki/chiyoyuki.github.io/tree/main/public/links.json";
 ---
 
 <MainGridLayout
@@ -38,75 +51,63 @@ const items = [
   <div
     class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32"
   >
-    <div class="card-base z-10 px-9 py-6 relative w-full">
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 my-4"
-        id="friends-list"
-      >
-        {
-          items.map((item) => (
-            <div class="friend-card flex flex-nowrap items-stretch h-28 gap-4 rounded-[var(--radius-large)]">
-              <div class="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200 dark:bg-zinc-900">
-                <img
-                  src={item.imgurl}
-                  alt="站点头像"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="grow w-full">
-                <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 mb-1">
-                  {item.title}
-                </div>
-                <div class="text-50 text-sm font-medium">{item.desc}</div>
-              </div>
-              <a
-                href={item.siteurl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex btn-regular w-[3.25rem] rounded-lg bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:bg-[var(--enter-btn-bg-active)] active:scale-95"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  class="transition text-[var(--primary)] text-4xl mx-auto iconify iconify--material-symbols"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z"
-                  />
-                </svg>
-              </a>
-            </div>
-          ))
-        }
-      </div>
+    <div class="card-base z-10 px-9 py-6 relative text-90 w-full">
+      <p>怎么可能有顺序呢，当然是随机的~ It's random</p><br />
+      <h2 id="common-links">个人收藏</h2>
+      <FriendList list={friends[0]} /><br />
+      <h2 id="special-links">先友后链</h2>
+      <FriendList list={friends[1]} /><br />
+      <h2 id="special-links">先链后友</h2>
+      <FriendList list={friends[2]} /><br />
+      <h2 id="special-links">特殊链接</h2>
+      <FriendList list={friends[3]} /><br />
+      
+      <!-- apply-links -->
       <Markdown class="mt-2">
-        <Content />
+        <h2 id="apply-links">Apply Links</h2>
+        <p>本站信息 The site information:</p>
+        <blockquote
+          class="not-prose grid grid-cols-[auto_1fr] gap-x-2 break-words border-s-4 ps-4"
+        >
+          {
+            linksConf.applyTip.map(({ name, val }) => {
+              const script = `navigator.clipboard.writeText('${val}');document.dispatchEvent(new CustomEvent('toast',{detail:{message:'Copied "${val}" to clipboard!'}}))`;
+              return (
+                <>
+                  <span class="text-end">{name}:</span>
+                  <samp class="cursor-pointer" onclick={script}>
+                    {val}
+                  </samp>
+                </>
+              );
+            })
+          }
+        </blockquote>
+        <p>
+          可通过下方留言或 <a href={linkEditPage} target="_blank">提交 PR</a> 申请友链。此外申请说明：<br
+          />
+          Apply your link by leaving comment or <a
+            href={linkEditPage}
+            target="_blank">Submitting a PR</a
+          >. Additional info:
+        </p>
+        <p>友链应属于下面三种情形之一：</p>
+        <ol class="list-decimal pl-5">
+          <li>
+            先链后友
+            <ol class="list-decimal pl-5">
+              <li>贵站可以正常访问；</li>
+              <li>贵站为原创内容居多的非商业性个人博客；</li>
+              <li>已在贵站友链处添加本站。</li>
+            </ol>
+          </li>
+          <li>
+            先友后链 — 在线下或其他社交媒体上与我有过交流，并且我们比较熟悉。
+          </li>
+          <li>个人收藏 — 我会主动添加一些自己喜欢的博客。</li>
+        </ol>
       </Markdown>
     </div>
   </div>
-
-  <!--在此处👇插入随机排列JS脚本 -->
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById("friends-list");
-      if (!container) return;
-      const cards = Array.from(container.children);
-      // 洗牌算法
-      for (let i = cards.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [cards[i], cards[j]] = [cards[j], cards[i]];
-      }
-      // 重新插入
-      cards.forEach((card) => container.appendChild(card));
-    });
-  </script>
-  <!--在此处👆插入随机排列JS脚本 -->
-
   <Waline path="/friends" />
 </MainGridLayout>
