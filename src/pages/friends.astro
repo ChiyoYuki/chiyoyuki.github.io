@@ -12,36 +12,36 @@ import FriendList from "@/components/links/FriendsList.astro";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
 
 const headings = [
-  { depth: 2, slug: "common-links", text: "Common Links" },
-  { depth: 2, slug: "special-links", text: "Special Links" },
-  { depth: 2, slug: "apply-links", text: "Apply Links" },
+	{ depth: 2, slug: "common-links", text: "Common Links" },
+	{ depth: 2, slug: "special-links", text: "Special Links" },
+	{ depth: 2, slug: "apply-links", text: "Apply Links" },
 ];
 
 const { friends } = links;
 // const linksConf = config.integ.links
 const linksConf = {
-  // Friend logbook
-  logbook: [
-    { date: "2025-03-16", content: "Is there a leakage?" },
-    { date: "2025-03-16", content: "A leakage of what?" },
-    {
-      date: "2025-03-16",
-      content: "I have a full seat of water, like, full of water!",
-    },
-    { date: "2025-03-16", content: "Must be the water." },
-    { date: "2025-03-16", content: "Let's add that to the words of wisdom." },
-  ],
-  // Yourself link info
-  applyTip: [
-    { name: "Name", val: "空と海" },
-    { name: "Desc", val: "Null" },
-    { name: "Link", val: "https://chiyoyuki.uk" },
-    { name: "Avatar", val: "就算活著沒有意義，偶而還是會碰到好事的。" },
-  ],
+	// Friend logbook
+	logbook: [
+		{ date: "2025-03-16", content: "Is there a leakage?" },
+		{ date: "2025-03-16", content: "A leakage of what?" },
+		{
+			date: "2025-03-16",
+			content: "I have a full seat of water, like, full of water!",
+		},
+		{ date: "2025-03-16", content: "Must be the water." },
+		{ date: "2025-03-16", content: "Let's add that to the words of wisdom." },
+	],
+	// Yourself link info
+	applyTip: [
+		{ name: "Name", val: "空と海" },
+		{ name: "Desc", val: "Null" },
+		{ name: "Link", val: "https://chiyoyuki.uk" },
+		{ name: "Avatar", val: "就算活著沒有意義，偶而還是會碰到好事的。" },
+	],
 };
 
 const linkEditPage =
-  "https://github.com/ChiyoYuki/chiyoyuki.github.io/tree/main/public/links.json";
+	"https://github.com/ChiyoYuki/chiyoyuki.github.io/tree/main/public/links.json";
 ---
 
 <MainGridLayout

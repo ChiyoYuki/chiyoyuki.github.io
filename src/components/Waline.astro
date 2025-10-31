@@ -50,8 +50,8 @@ const { class: className } = Astro.props;
 
 <style>
   :root {
-    --waline-theme-color: #b5c4ff;
-    --waline-active-color: #c5d4ff;
+    --waline-theme-color: var(--primary);
+    --waline-active-color: var(--button-active);
   }
 
   :global(.dark) #waline {
