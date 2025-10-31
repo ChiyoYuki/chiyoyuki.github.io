@@ -40,9 +40,15 @@
       "desc": "特殊链接",
       "link_list": [
         {
+          "name": "异次元之旅",
+          "intro": "我们一起去萌站成员的星球旅行吧！",
+          "link": "https://travel.moe/go.html",
+          "avatar": "https://icp.gov.moe/images/ico400.png"
+        },
+        {
           "name": "开往",
           "intro": "随机前往开往的成员博客",
-          "link": "https://www.travellings.cn/go.html",
+          "link": "https://www.travellings.cn/go-robots.html",
           "avatar": "https://www.travellings.cn/assets/travelling.png"
         }
       ]
