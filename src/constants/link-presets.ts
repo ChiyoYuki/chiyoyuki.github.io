@@ -27,6 +27,6 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 	[LinkPreset.Friends]: {
 		icon: "fa6-solid:user-group",
 		name: i18n(I18nKey.friends),
-		url: "/friends/",
+		url: "/links/",
 	},
 };
