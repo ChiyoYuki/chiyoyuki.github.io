@@ -1,0 +1,39 @@
+{
+  "friends": [
+    {
+      "id_name": "cf-links",
+      "desc": "Common links included in circle friends",
+      "link_list": [
+        {
+          "name": "Axi's Blog",
+          "intro": "一只可爱小猫",
+          "link": "https://axi404.top",
+          "avatar": "https://axi404.top/avatar/avatar.png"
+        },
+        {
+          "name": "Eric's Blog",
+          "intro": "热爱生活",
+          "link": "https://zhao20060708.github.io",
+          "avatar": "https://zhao20060708.github.io/img/avatar_hu_41742121d310973e.png"
+        }
+      ]
+    },
+    {
+      "id_name": "inactive-links",
+      "desc": "Inactive or rule-breaking friends",
+      "link_list": []
+    },
+    {
+      "id_name": "special-links",
+      "desc": "Other special links",
+      "link_list": [
+        {
+          "name": "开往",
+          "intro": "随机前往开往的成员博客",
+          "link": "https://www.travellings.cn/go.html",
+          "avatar": "https://www.travellings.cn/assets/travelling.png"
+        }
+      ]
+    }
+  ]
+}
