@@ -50,6 +50,10 @@ export const navBarConfig: NavBarConfig = {
 			name: "ACGN",
 			url: "/bangumi/",
 		},
+    {
+			name: "Misskey",
+			url: "/misskey/",
+		},
 		LinkPreset.Notes,
 		{
 			icon: "fa6-brands:github",
