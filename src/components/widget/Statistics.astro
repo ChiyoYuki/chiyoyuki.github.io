@@ -29,13 +29,20 @@ function countWords(text = "") {
 function formatDuration(from: Date, to: Date) {
 	let years = to.getFullYear() - from.getFullYear();
 	let months = to.getMonth() - from.getMonth();
-	let days = to.getDate();
+	let days = to.getDate() - from.getDate();
 	if (to.getDate() < from.getDate()) {
-		months -= 1;
-		const prevMonth =
-			new Date(to.getFullYear(), to.getMonth(), 1).getDate() - from.getDate();
-	} else {
-		days -= from.getDate();
+		if (days < 0) {
+			months--;
+			// 借用上个月的最后一天
+			const lastDayOfPreviousMonth = new Date(
+				to.getFullYear(),
+				to.getMonth(),
+				0,
+			).getDate();
+			days += lastDayOfPreviousMonth;
+		} else {
+			days -= from.getDate();
+		}
 	}
 	if (months < 0) {
 		years -= 1;
