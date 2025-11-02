@@ -50,17 +50,14 @@ export const navBarConfig: NavBarConfig = {
 			name: "ACGN",
 			url: "/bangumi/",
 		},
-    {
-			name: "Misskey",
-			url: "/misskey/",
-		},
 		LinkPreset.Notes,
 		{
-			icon: "fa6-brands:github",
-			url: "https://github.com/chiyoyuki/chiyoyuki.github.io", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
+			icon: "fa6-solid:comment",
+			name: "随记",
+			url: "/fediverse/",
 		},
 		{
+			name: "开往",
 			icon: "fa6-solid:train-subway",
 			url: "https://www.travellings.cn/train.html",
 			external: true, // Show an external link icon and will open in a new tab

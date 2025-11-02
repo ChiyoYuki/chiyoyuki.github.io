@@ -1,0 +1,63 @@
+---
+import Markdown from "@components/misc/Markdown.astro";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+---
+
+<MainGridLayout title="Misskey" description="My misskey">
+  <div
+    class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32"
+  >
+    <div class="card-base z-10 px-9 py-6 relative w-full">
+      <Markdown class="mt-2">
+        <h1>随记</h1>
+        <p>这里用于存放我的一些怪点子和想法</p>
+        <!-- 以下为 Mastodon 配置 -->
+        <h2>Mastodon(zh)</h2>
+        <p>这是我的 Mastodon 动态。</p>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@idotj/mastodon-embed-timeline/dist/mastodon-timeline.min.css"
+        />
+
+        <div
+          id="mt-container"
+          class="mt-container"
+          style="margin: 1rem auto; border: none; width: 100%; max-width: 500px; height: 300px;"
+        >
+          <div class="mt-body" role="feed">
+            <div class="mt-loading-spinner"></div>
+          </div>
+        </div>
+
+        <script
+          defer
+          src="https://cdn.jsdelivr.net/npm/@idotj/mastodon-embed-timeline/dist/mastodon-timeline.umd.js"
+        ></script>
+        <script defer>
+          window.addEventListener("DOMContentLoaded", () => {
+            new window.MastodonTimeline.Init({
+              instanceUrl: "https://mastodon.social",
+              timelineType: "profile",
+              userId: "112313614429794283",
+              profileName: "@ChiyoYuki",
+              btnSeeMore: "前往原文",
+              btnReload: "刷新",
+            });
+          });
+        </script>
+
+        <!-- 以下为 Misskey 配置 -->
+        <h2>Misskey(ja)</h2>
+        <p>これは私の Misskey タイムライン</p>
+        <iframe
+          src="https://voskey.icalo.net/embed/user-timeline/aejnoj8lvn"
+          data-misskey-embed-id="v1_<RANDOM>"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"
+        ></iframe>
+        <script defer src="https://voskey.icalo.net/embed.js"></script>
+      </Markdown>
+    </div>
+  </div>
+</MainGridLayout>
