@@ -50,7 +50,7 @@ if (!fileExtensionRegex.test(fileName)) {
 }
 
 const targetDir = `./src/content/posts/${getDateDir()}/`;
-const fullPath = path.join(targetDir, fileName);
+const fullPath = path.join(targetDir, "index.md");
 
 if (fs.existsSync(fullPath)) {
 	console.error(`Error: File ${fullPath} already exists `);
