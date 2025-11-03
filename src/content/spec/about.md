@@ -6,16 +6,16 @@
 Hi! I'm `Yuki Chiyo`. You can also call me `=>` or something else...I'm not good at English now.  
 こんにちは～わたしは`千代有希`／`千代雪`（`ちよゆき`）です。日本語を勉強しています。
 
-`千代`来源于 ~~\[数据删除\]~~ ，而`雪`是因为我单纯喜欢雪，`有希`则是觉得四个字的名字会看上去整齐一些，就选择了一个和`雪`读音一致的常见名。  
+`千代`来源于 ~~\[数据删除\]~~ ，而`雪`是因为我单纯喜欢雪，`有希`则是觉得四个字的名字会看上去整齐一些，就选择了一个和`雪`读音一致的常见名。
 
-目前我还是无业游民。在试图学习一些有趣的东西。  
+目前我还是无业游民。在试图学习一些有趣的东西。
 
-坦白来讲，我比较害怕被别人了解太多，所以这里写的很少。
+坦白来讲，我不太擅长介绍自己，所以这里写的很少。
 所以如果你想知道更多关于我的事情的话，请去读我的博文。
 
 ## whereami
 
-我的博客。
+我的博客，理想状态下大概是生活技术五五开。
 
 - 本体采用 [Astro](https://astro.build/) 搭建；
 - 主题为 [Fuwari](https://fuwari.vercel.app/) ；
@@ -24,16 +24,20 @@ Hi! I'm `Yuki Chiyo`. You can also call me `=>` or something else...I'm not good
 - 旧友链页面参考了[AULyPc](https://aulypc1.github.io/about/)的文章《[给你的 Fuwari 添加一个友链页面](https://aulypc1.github.io/posts/website/add_friendspage_in_fuwari/)》；
 - 当前友链页面参考了 [pure](https://astro-pure.js.org/) 主题；
 - 友链朋友圈采用 [Friend Circle Lite](https://github.com/willow-god/Friend-Circle-Lite) 实现；
+- 当前笔记界面采用 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 实现；
 - 当前随记页面采用了内嵌 [Misskey](https://misskey-hub.net/) 时间线的方式实现；
 - 友链朋友圈样式参考了 [CWorld](https://cworld0.com/about) 的[友链页面](https://cworld0.com/links)；
 - 侧栏统计数据参考了 [Pinpe](https://pinpe.top/about/) 的网站 [Pinpe 的云端](https://pinpe.top) ；
 
 在此向上述各位予以感谢，下面是所涉及的 Github 仓库：
 
+::github{repo="chiyoyuki/chiyoyuki.github.io"}
+::github{repo="chiyoyuki/note"}
 ::github{repo="withastro/astro"}
 ::github{repo="saicaca/fuwari"}
 ::github{repo="walinejs/waline"}
 ::github{repo="cworld1/astro-theme-pure"}
+::github{repo="squidfunk/mkdocs-material"}
 ::github{repo="misskey-dev/misskey"}
 ::github{repo="voskey-dev/voskey"}
 
