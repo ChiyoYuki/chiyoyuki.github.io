@@ -1,10 +1,10 @@
 ---
 title: 2025秋06周周记
 published: 2025-10-25T21:00:00+08:00
-updated: 2025-10-29T23:37:57+08:00
+updated: 2025-11-03T15:41:20+08:00
 description: "你好，Fuwari"
 image: "./cover.jpg"
-tags: []
+tags: ["2025Autumn"]
 category: "周记"
 draft: false
 lang: ""
