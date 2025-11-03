@@ -38,6 +38,9 @@ importers:
       '@fontsource/roboto':
         specifier: ^5.2.8
         version: 5.2.8
+      '@iconify-json/arcticons':
+        specifier: ^1.2.38
+        version: 1.2.38
       '@iconify-json/fa6-brands':
         specifier: ^1.2.6
         version: 1.2.6
@@ -50,6 +53,9 @@ importers:
       '@iconify-json/material-symbols':
         specifier: ^1.2.44
         version: 1.2.44
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.57
+        version: 1.2.57
       '@iconify/svelte':
         specifier: ^4.2.0
         version: 4.2.0(svelte@5.43.2)
@@ -886,8 +892,8 @@ packages:
   '@emmetio/css-abbreviation@2.1.8':
     resolution: {integrity: sha512-s9yjhJ6saOO/uk1V74eifykk2CBYi01STTK3WlXWGOepyKa23ymJ053+DNQjpFcy1ingpaO7AxCcwLvHFY9tuw==}
 
-  '@emmetio/css-parser@https://codeload.github.com/ramya-rao-a/css-parser/tar.gz/370c480ac103bd17c7bcfb34bf5d577dc40d3660':
-    resolution: {tarball: https://codeload.github.com/ramya-rao-a/css-parser/tar.gz/370c480ac103bd17c7bcfb34bf5d577dc40d3660}
+  '@emmetio/css-parser@git+https://git@github.com:ramya-rao-a/css-parser.git#370c480ac103bd17c7bcfb34bf5d577dc40d3660':
+    resolution: {commit: 370c480ac103bd17c7bcfb34bf5d577dc40d3660, repo: git@github.com:ramya-rao-a/css-parser.git, type: git}
     version: 0.4.0
 
   '@emmetio/html-matcher@1.3.0':
@@ -1085,6 +1091,9 @@ packages:
   '@fontsource/roboto@5.2.8':
     resolution: {integrity: sha512-oh9g4Cg3loVMz9MWeKWfDI+ooxxG1aRVetkiKIb2ESS2rrryGecQ/y4pAj4z5A5ebyw450dYRi/c4k/I3UBhHA==}
 
+  '@iconify-json/arcticons@1.2.38':
+    resolution: {integrity: sha512-AnPvt17WFSGkakgWHRobIrRi1SEPmpzRAoOn6SokwoaItBzjUcgvRNW/GDuh/PWZwI5T4+VRJaBmB4Owa1Cktw==}
+
   '@iconify-json/fa6-brands@1.2.6':
     resolution: {integrity: sha512-twL3X4KWcxAhbc1vz/mIDsVr+CAItk1/EIfxKUVQtpv6O4eydk5KNYqTZWdvJNHGInUgd6vKg21aWfVgb5DXEg==}
 
@@ -1096,6 +1105,9 @@ packages:
 
   '@iconify-json/material-symbols@1.2.44':
     resolution: {integrity: sha512-NAJjhswaK9FxBeIzFFsNygws7wHtmAkBWhF4YEwn1NZIMbA+LNITqhUiq6sP5mOdKQqnoritFTlQaZ47a5BgBg==}
+
+  '@iconify-json/simple-icons@1.2.57':
+    resolution: {integrity: sha512-/yWbO502M6WfvmcV5OjEgA4uoPN/76nrn7Hri/8g9L4GiNQ6VMgXWE9vFp4tDsmGMAe4ZCov3NbH6vJCgXZ1hA==}
 
   '@iconify/svelte@4.2.0':
     resolution: {integrity: sha512-fEl0T7SAPonK7xk6xUlRPDmFDZVDe2Z7ZstlqeDS/sS8ve2uyU+Qa8rTWbIqzZJlRvONkK5kVXiUf9nIc+6OOQ==}
@@ -6163,7 +6175,7 @@ snapshots:
     dependencies:
       '@emmetio/scanner': 1.0.4
 
-  '@emmetio/css-parser@https://codeload.github.com/ramya-rao-a/css-parser/tar.gz/370c480ac103bd17c7bcfb34bf5d577dc40d3660':
+  '@emmetio/css-parser@git+https://git@github.com:ramya-rao-a/css-parser.git#370c480ac103bd17c7bcfb34bf5d577dc40d3660':
     dependencies:
       '@emmetio/stream-reader': 2.2.0
       '@emmetio/stream-reader-utils': 0.1.0
@@ -6298,6 +6310,10 @@ snapshots:
 
   '@fontsource/roboto@5.2.8': {}
 
+  '@iconify-json/arcticons@1.2.38':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/fa6-brands@1.2.6':
     dependencies:
       '@iconify/types': 2.0.0
@@ -6311,6 +6327,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/material-symbols@1.2.44':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.57':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -10957,7 +10977,7 @@ snapshots:
 
   volar-service-emmet@0.0.66(@volar/language-service@2.4.23):
     dependencies:
-      '@emmetio/css-parser': https://codeload.github.com/ramya-rao-a/css-parser/tar.gz/370c480ac103bd17c7bcfb34bf5d577dc40d3660
+      '@emmetio/css-parser': git+https://git@github.com:ramya-rao-a/css-parser.git#370c480ac103bd17c7bcfb34bf5d577dc40d3660
       '@emmetio/html-matcher': 1.3.0
       '@vscode/emmet-helper': 2.11.0
       vscode-uri: 3.1.0

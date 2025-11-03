@@ -50,18 +50,18 @@ export const navBarConfig: NavBarConfig = {
 			name: "ACGN",
 			url: "/bangumi/",
 		},
-		LinkPreset.Notes,
 		{
 			icon: "fa6-solid:comment",
 			name: "随记",
 			url: "/fediverse/",
 		},
-		{
-			name: "开往",
-			icon: "fa6-solid:train-subway",
-			url: "https://www.travellings.cn/train.html",
-			external: true, // Show an external link icon and will open in a new tab
-		},
+		LinkPreset.Notes,
+		//{
+		//	name: "开往",
+		//	icon: "fa6-solid:train-subway",
+		//	url: "https://www.travellings.cn/train.html",
+		//	external: true, // Show an external link icon and will open in a new tab
+		//},
 	],
 };
 
@@ -77,15 +77,25 @@ export const profileConfig: ProfileConfig = {
 		//	// `pnpm add @iconify-json/<icon-set-name>`
 		//	url: "https://twitter.com",
 		// },
-		// {
-		//	name: "Steam",
-		//	icon: "fa6-brands:steam",
-		//	url: "https://store.steampowered.com",
-		// },
+		{
+			name: "rss",
+			icon: "material-symbols:rss-feed",
+			url: "./rss.xml",
+		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
 			url: "https://github.com/chiyoyuki",
+		},
+		{
+			name: "CodeForces",
+			icon: "simple-icons:codeforces",
+			url: "https://codeforces.com/profile/ChiyoYuki",
+		},
+		{
+			name: "Misskey",
+			icon: "simple-icons:misskey",
+			url: "https://voskey.icalo.net/@chiyoyuki",
 		},
 	],
 };
