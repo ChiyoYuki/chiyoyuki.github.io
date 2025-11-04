@@ -76,6 +76,6 @@ lang: ''
 ---
 `;
 
-fs.writeFileSync(path.join(targetDir, fileName), content);
+fs.writeFileSync(path.join(targetDir, "index.md"), content);
 
 console.log(`Post ${fullPath} created`);
