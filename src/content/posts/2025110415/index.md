@@ -3,7 +3,7 @@ title: 程设基础讲义1
 published: 2025-11-04T15:26:38+08:00
 updated: 2025-11-05T04:46:21+08:00
 description: ""
-image: ""
+image: "./cover.jpeg"
 tags: []
 category: ""
 draft: false
@@ -684,3 +684,5 @@ long long binpow(long long base, long long exp, long long mod) {
   return ans;
 }
 ```
+
+> 本文封面为[nekomo🐾](https://x.com/yumenkmc)创作的[作品](https://x.com/yumenkmc/status/1959180564269048261/photo/1)
