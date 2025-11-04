@@ -1,7 +1,7 @@
 ---
 title: 程设基础讲义1
 published: 2025-11-04T15:26:38+08:00
-updated: 2025-11-04T15:26:38+08:00
+updated: 2025-11-05T04:46:21+08:00
 description: ""
 image: ""
 tags: []
@@ -313,6 +313,87 @@ int main() {
 
 ### 指针传递参数
 
+有时候在调用函数的时候，我们希望改变函数的参数，比如考虑这样一个函数：
+
+传入两个整型变量，令两个数字均变为二者的最大值，但函数返回两个数中的较小值。
+
+```c
+int fun(int x,int y) {
+  int less_value;
+  if(x > y) {
+    less_value = y;
+    y = x;
+  }
+  else {
+    less_value = x;
+    x = y;
+  }
+  return less_value;
+}
+```
+
+这个函数看上去像是实现了要求，但是如果在函数外部检查传入的变量，
+我们会发现二者的值根本没有发生改变。
+这是因为函数的参数被当作函数的内部变量。
+
+```c
+#include<stdio.h>
+
+int fun(int x,int y) {
+  int less_value;
+  if(x > y) {
+    less_value = y;
+    y = x;
+  }
+  else {
+    less_value = x;
+    x = y;
+  }
+  printf("&x=%p, &y=%p.\n",&x,&y);
+  return less_value;
+}
+
+int main() {
+  int a = 37, b = 42;
+  int c = fun(a,b);
+  printf("a=%d, b=%d, c=%d.\n",a,b,c);
+  printf("&a=%p, &b=%p.\n",&a,&b);
+}
+```
+
+在这里我们捎带着讲一下变量的作用域：
+
+C 语言的变量分为局部变量和全局变量。
+
+局部变量声明在函数或代码块（即被一对大括号包裹的代码）内部，
+其作用域仅在函数或代码块内部，在作用域外无法访问这个变量。
+
+全局变量声明在所有函数之外，通常是在代码顶端，
+任何函数都可以访问全局变量。
+
+回到上述函数的问题上来，函数传入的形参作为函数的内部变量，
+这意味着在函数内部对参数的修改不会作用到函数外。
+我们通过程序的输出结果也可以看出 x 与 a；y 与 b 的地址并不相同。
+
+针对这种情况，我们可以通过传入指针的做法实现函数功能
+
+```c
+int fun(int *x,int *y) {
+  int less_value;
+  if(*x > *y) {
+    less_value = *y;
+    *y = *x;
+  }
+  else {
+    less_value = *x;
+    *x = *y;
+  }
+  return less_value;
+}
+```
+
+> 这里需要画个图
+
 ### 指针的算数运算
 
 指针可以进行自增、自减操作，也可以加上或减去一个整数
@@ -528,9 +609,30 @@ int main() {
 
 ### 字符串标准库函数
 
-在标准库 `string.h` 中，定义了一些用作字符串操作的函数，
+在标准库 `string.h` 中，定义了一些用作字符串操作的函数，我们在此介绍一些：
+
+- `size_t strlen(cs)` ：返回 `cs` 的长度
+- `char *strcat(s,ct)` 和 `char *strncat(s,ct,n)`：将字符串 `ct` 连接到 `s` 的尾部，并返回 `s`
+- `int strcmp(cs,ct)` 和 `int *strncmp(cs,ct,n)`：`cs` 小于 `ct`返回 `负数` ，等于返回 `0` ，大于返回`正数`（字典序比较）；
+- `char *strcpy(s,ct)` 和 `char *strncpy(s,ct,n)`：将字符串 `ct` 复制到 `s` 中，并返回 `s` 。
+
+依旧代码举例
+
+```c
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+  char str1[] = "foo", str2[] ="bar";
+  printf("The length of str1 is %d.\n", strlen(str1));
+  return 0;
+}
+
+```
 
 ## 应用
+
+~~写不动不想写了，反正这部分是主观内容，留着找例题自由发挥吧。~~
 
 ### 构思循环条件的切入点
 
