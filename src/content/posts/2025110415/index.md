@@ -577,11 +577,7 @@ int main() {
 考虑到网络上已经有现成的[科普视频](https://www.bilibili.com/video/BV1aeHaexETd/)，
 我直接在这里 include 进来好了。
 
-<iframe
-  src="//player.bilibili.com/player.html?bvid=BV1aeHaexETd&p=1&autoplay=0"
-  style="display:inline-block;width:49%;min-width:200px;height:234px;box-sizing:border-box;border:0;vertical-align:top;"
-  scrolling="no" frameborder="0" loading="lazy" allowfullscreen>
-</iframe>
+<iframe width="100%" height="468" src="//player.bilibili.com/player.html?bvid=BV1aeHaexETd&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ### 数组越界
 
