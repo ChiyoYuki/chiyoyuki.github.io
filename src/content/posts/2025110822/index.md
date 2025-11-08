@@ -38,9 +38,7 @@ He wants to make the body part heavier so that the robot does not fall over. Fin
 
 The input is given from Standard Input in the following format:
 
-```
-$H$ $B$
-```
+> $H$ $B$
 
 ### Output
 
@@ -97,16 +95,14 @@ Process the following $Q$ queries in order. The $i$\-th query $(1\le i\le Q)$ is
 
 The input is given from Standard Input in the following format:
 
-```
-$X$
-$N$
-$W _ 1$ $W _ 2$ $\ldots$ $W _ N$
-$Q$
-$P _ 1$
-$P _ 2$
-$\vdots$
-$P _ Q$
-```
+> $X$  
+> $N$  
+> $W _ 1$ $W _ 2$ $\ldots$ $W _ N$  
+> $Q$  
+> $P _ 1$  
+> $P _ 2$  
+> $\vdots$  
+> $P _ Q$
 
 ### Output
 
@@ -189,11 +185,9 @@ Here, a part cannot be used to create multiple robots, and two or more head part
 
 The input is given from Standard Input in the following format:
 
-```
-$N$ $M$ $K$
-$H _ 1$ $H _ 2$ $\ldots$ $H _ N$
-$B _ 1$ $B _ 2$ $\ldots$ $B _ M$
-```
+> $N$ $M$ $K$  
+> $H _ 1$ $H _ 2$ $\ldots$ $H _ N$  
+> $B _ 1$ $B _ 2$ $\ldots$ $B _ M$
 
 ### Output
 
@@ -263,13 +257,11 @@ Takahashi wants to attach all $N$ types of parts to the robot, one of each. Find
 
 The input is given from Standard Input in the following format:
 
-```
-$N$
-$W _ 1$ $H _ 1$ $B _ 1$
-$W _ 2$ $H _ 2$ $B _ 2$
-$\vdots$
-$W _ N$ $H _ N$ $B _ N$
-```
+> $N$  
+> $W _ 1$ $H _ 1$ $B _ 1$  
+> $W _ 2$ $H _ 2$ $B _ 2$  
+> $\vdots$  
+> $W _ N$ $H _ N$ $B _ N$
 
 ### Output
 
