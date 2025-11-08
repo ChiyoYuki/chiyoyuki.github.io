@@ -1,7 +1,7 @@
 ---
-title: 2025秋07周周记
+title: 55 年秋 12 周周记
 published: 2025-11-03T13:09:03+08:00
-updated: 2025-11-03T13:09:03+08:00
+updated: 2025-11-09T01:39:03+08:00
 description: "要记得学数学啊！"
 image: "cover.png"
 tags: ["2025Autumn"]
@@ -10,7 +10,7 @@ draft: false
 lang: ""
 ---
 
-# 2025 秋 07 周周记
+# 55 年秋 12 周周记
 
 ## 学习
 

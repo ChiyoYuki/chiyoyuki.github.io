@@ -50,10 +50,12 @@ export default defineConfig({
 		icon({
 			include: {
 				"preprocess: vitePreprocess(),": ["*"],
+        "arcticons": ["*"],
 				"fa6-brands": ["*"],
 				"fa6-regular": ["*"],
 				"fa6-solid": ["*"],
 				"material-symbols": ["*"],
+        "simple-icons": ["*"],
 			},
 		}),
 		expressiveCode({

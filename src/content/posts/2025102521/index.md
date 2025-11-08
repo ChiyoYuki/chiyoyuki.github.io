@@ -1,7 +1,7 @@
 ---
-title: 2025秋06周周记
+title: 55 年秋 11 周周记
 published: 2025-10-25T21:00:00+08:00
-updated: 2025-11-03T15:41:20+08:00
+updated: 2025-11-09T01:40:20+08:00
 description: "你好，Fuwari"
 image: "./cover.jpg"
 tags: ["2025Autumn"]
@@ -10,7 +10,7 @@ draft: false
 lang: ""
 ---
 
-# 学习记录 - 第六周
+# 学习记录
 
 ## 计算机
 

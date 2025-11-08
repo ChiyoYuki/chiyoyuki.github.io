@@ -49,3 +49,29 @@ Hi! I'm `Yuki Chiyo`. You can also call me `=>` or something else...I'm not good
 | 202410~202501 | [Wordpress](https://wordpress.org/) theme [Sakurairo](https://github.com/mirai-mamori/Sakurairo) |
 | 202505~202510 | [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)                              |
 | 202510~now    | [Astro](https://astro.build/) theme [fuwari](https://github.com/saicaca/fuwari)                  |
+
+## 感觉有些地方读起来怪怪的？
+
+> 本小节最后修改于 五十五年 冬 一周 日曜日 二十六时 十七分
+
+~~为了增加一点神秘（还是说神经呢）感（bushi）~~
+文章中相当多的地方我没有采用较为流行的记法：
+
+文章中出现的大多地名为我刻意起的别名，
+对照表暂不给出，但各位可以自行猜测一下
+
+文章当中出现的的时间为我个人使用的记录法，
+但文章的发布时间、修改时间、固定链接等部分仍按照正常时间记录。
+具体规则大致如下：
+
+- 年：以公元 1970 年为 0 年；
+- 季：以立春、立夏、立秋、立冬四日为四季起点；
+- _月：与现行格里高利历保持一致；_
+- 周：以星期日为一周起始点，
+  以占天数多的季节为本周季节。
+  如某周周三为立冬，
+  则该周为冬季首周，
+  若周四为立冬则该周为秋季末周；
+- 日：周内日期采用七曜记日法；
+- 时：采用 30 小时制，如无特殊注明，
+  文章中提及日期的时区均为 `Asia/Shanghai`。
