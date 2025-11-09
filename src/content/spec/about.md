@@ -28,8 +28,9 @@ Hi! I'm `Yuki Chiyo`. You can also call me `=>` or something else...I'm not good
 - 当前随记页面采用了内嵌 [Misskey](https://misskey-hub.net/) 时间线的方式实现；
 - 友链朋友圈样式参考了 [CWorld](https://cworld0.com/about) 的[友链页面](https://cworld0.com/links)；
 - 侧栏统计数据参考了 [Pinpe](https://pinpe.top/about/) 的网站 [Pinpe 的云端](https://pinpe.top) ；
+- 版权标签动态签名参考了 [柃夏chapu](https://blog.lxchapu.com/about/) 的文章 [制作一个好看的动态签名🖋️](https://blog.lxchapu.com/posts/make-a-beautify-animated-signature/) ；
 
-在此向上述各位予以感谢，下面是所涉及的 Github 仓库：
+在此向上述各位予以感谢，下面是所涉及的部分 Github 仓库：
 
 ::github{repo="chiyoyuki/chiyoyuki.github.io"}
 ::github{repo="chiyoyuki/note"}
@@ -66,7 +67,7 @@ Hi! I'm `Yuki Chiyo`. You can also call me `=>` or something else...I'm not good
 
 - 年：以公元 1970 年为 0 年；
 - 季：以立春、立夏、立秋、立冬四日为四季起点；
-- _月：与现行格里高利历保持一致；_
+- _月 **（可能不常使用）** ：与现行格里高利历保持一致；_
 - 周：以星期日为一周起始点，
   以占天数多的季节为本周季节。
   如某周周三为立冬，
