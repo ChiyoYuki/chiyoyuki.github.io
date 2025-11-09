@@ -1,9 +1,9 @@
 ---
 title: AtCoder Beginner Contest 431
 published: 2025-11-08T22:39:17+08:00
-updated: 2025-11-08T22:39:17+08:00
+updated: 2025-11-10T01:12:43+08:00
 description: "A/B/C/D; rk2294"
-image: ""
+image: "./cover.jpg"
 tags: ["cpp", "atc"]
 category: "算竞"
 draft: false
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-## [C - Robot Factory]
+## [C - Robot Factory](https://atcoder.jp/contests/abc431/tasks/abc431_c)
 
 > 2 sec / 1024 MiB / 300 pts
 
@@ -309,3 +309,5 @@ int main() {
   return 0;
 }
 ```
+
+> 本文封面为作品[ATRI -My Dear Moments-](https://atri-mdm.com/)中的[CG](https://atri-mdm.com/gallery/)

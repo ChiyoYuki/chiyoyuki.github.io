@@ -5,7 +5,7 @@ updated: 2025-11-05T04:46:21+08:00
 description: ""
 image: "./cover.jpeg"
 tags: []
-category: ""
+category: "讲义"
 draft: false
 lang: ""
 ---
