@@ -78,4 +78,4 @@ lang: ""
 
 计划是从下周开始恢复单词背诵，主要使用电脑端 anki ，将日常工作流重心迁移到电脑上，同时养成记博客的习惯。
 
-> 本文封面为作品[anemoi](https://key.visualarts.gr.jp/anemoi/)中的[CG？](https://key.visualarts.gr.jp/anemoi/gallery.html)
+> 本文封面为作品[anemoi](https://key.visualarts.gr.jp/anemoi/)中的[CG](https://key.visualarts.gr.jp/anemoi/gallery.html)
