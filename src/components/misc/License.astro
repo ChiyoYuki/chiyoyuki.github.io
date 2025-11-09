@@ -64,20 +64,20 @@ const postUrl = decodeURIComponent(Astro.url.toString());
     </div>
     <!-- 这段为签名动画（始终固定在版权栏右下，覆盖在 CC 图标上） -->
     <div
-        class="animated-signature transition text-black/75 dark:text-white/75 absolute right-6 bottom-3 pointer-events-none z-10"
+        class="animated-signature transition text-black/75 dark:text-white/75 absolute right-6 bottom-3 pointer-events-none"
     >
         <Fragment set:html={Sign} />
     </div>
     <Icon
         name="fa6-brands:creative-commons"
-        class="transition text-[15rem] absolute pointer-events-none right-6 top-1/2 -translate-y-1/2 text-black/5 dark:text-white/5 z-0"
+        class="transition text-[15rem] absolute pointer-events-none right-6 top-1/2 -translate-y-1/2 text-black/5 dark:text-white/5"
     />
 </div>
 
 <style is:global>
     /* 使通过 innerHTML 注入的 SVG 能被样式匹配（Astro 的 scoped 样式不会自动作用到 innerHTML） */
     .animated-signature {
-        width: 20%; /* 根据需要调整签名大小 */
+        width: 18.75%; /* 根据需要调整签名大小 */
         height: auto;
         vertical-align: middle;
         overflow: visible;
