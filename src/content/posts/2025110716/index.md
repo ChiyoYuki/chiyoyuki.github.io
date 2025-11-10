@@ -257,4 +257,6 @@ p.s. 如想基于 [Disqus](https://disqus.com/) 、
 
 ### 动态签名
 
+### 邮箱转发
+
 > 本文封面为[花見リロ](https://www.pixiv.net/users/23848571)所绘制的[道路：末日](https://www.pixiv.net/artworks/128488941)
