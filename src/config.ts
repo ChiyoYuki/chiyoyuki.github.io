@@ -77,12 +77,7 @@ export const profileConfig: ProfileConfig = {
 		//	// `pnpm add @iconify-json/<icon-set-name>`
 		//	url: "https://twitter.com",
 		// },
-		{
-			name: "rss",
-			icon: "material-symbols:rss-feed",
-			url: "./rss.xml",
-		},
-		{
+    {
 			name: "GitHub",
 			icon: "fa6-brands:github",
 			url: "https://github.com/chiyoyuki",
@@ -93,9 +88,19 @@ export const profileConfig: ProfileConfig = {
 			url: "https://codeforces.com/profile/ChiyoYuki",
 		},
 		{
+			name: "rss",
+			icon: "material-symbols:rss-feed",
+			url: "./rss.xml",
+		},
+    {
 			name: "Misskey",
 			icon: "simple-icons:misskey",
 			url: "https://voskey.icalo.net/@chiyoyuki",
+		},
+    {
+			name: "e-mail",
+			icon: "material-symbols:mail",
+			url: "mailto:yuki@chiyo.uk",
 		},
 	],
 };
