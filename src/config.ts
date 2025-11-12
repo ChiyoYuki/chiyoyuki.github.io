@@ -87,6 +87,11 @@ export const profileConfig: ProfileConfig = {
 			icon: "simple-icons:codeforces",
 			url: "https://codeforces.com/profile/ChiyoYuki",
 		},
+    {
+      name: "Steam",
+      icon: "fa6-brands:steam",
+      url: "https://steamcommunity.com/profiles/76561199200893188/",
+    },
 		{
 			name: "rss",
 			icon: "material-symbols:rss-feed",
