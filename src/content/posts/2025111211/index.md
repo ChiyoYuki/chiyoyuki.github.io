@@ -1,5 +1,5 @@
 ---
-title: 博客折腾指北0x03 - 随记、一言或是别的什么名字
+title: 博客折腾指北0x03 - 随记、一言或是微语
 published: 2025-11-12T11:32:02+08:00
 updated: 2025-11-12T11:32:02+08:00
 description: "今天说点什么怪话好呢？"
@@ -15,9 +15,7 @@ tags:
     "Misskey",
     "Mastodon",
     "一言",
-    "微语",
     "随记",
-    "微博客",
   ]
 category: "折腾"
 draft: false
