@@ -45,8 +45,13 @@
           "intro": "NULL",
           "link": "https://www.yokari.fun/",
           "avatar": "https://www.yokari.fun/images/avatar.jpg"
+        },
+        {
+          "name": "Mitchell's Homepage",
+          "intro": "living in a simulation",
+          "link": "https://zeyi2.github.io/",
+          "avatar": ""
         }
-
       ]
     },
     {
