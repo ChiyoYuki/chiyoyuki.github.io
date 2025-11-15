@@ -1,76 +1,81 @@
 {
-  "friends": [
-    {
-      "id_name": "my-favorite-links",
-      "desc": "个人收藏",
-      "link_list": [
-        {
-          "name": "Axi's Blog",
-          "intro": "一只可爱小猫",
-          "link": "https://axi404.top",
-          "avatar": "https://axi404.top/avatar/avatar.png"
-        },
-        {
-          "name": "霞の葉間",
-          "intro": "光と言葉の狭間",
-          "link": "https://kasuha.com",
-          "avatar": "https://kasuha.com/avatar.webp"
-        },
-        {
-          "name": "茶栗栗屋",
-          "intro": "茶栗的碎碎念",
-          "link": "https://chariri.moe/",
-          "avatar": "https://avatars.githubusercontent.com/u/6622592"
-        },
-        {
-          "name": "Yukitoha 站站站",
-          "intro": "v0.13 ... 能跑就行了吧？",
-          "link": "https://vescrity.github.io/",
-          "avatar": "https://gravatar.com/avatar/e11a9ca7d685d7201509d1eaa446c375?size=1024"
-        }
-      ]
-    },
-    {
-      "id_name": "my-friends-links",
-      "desc": "先友后链",
-      "link_list": [
-        {
-          "name": "Eric's Blog",
-          "intro": "热爱生活",
-          "link": "https://zhao20060708.github.io",
-          "avatar": "https://zhao20060708.github.io/img/avatar_hu_41742121d310973e.png"
-        },
-        {
-          "name": "n0irzzz's blog",
-          "intro": "NULL",
-          "link": "https://www.yokari.fun/",
-          "avatar": "https://www.yokari.fun/images/avatar.jpg"
-        }
-
-      ]
-    },
-    {
-      "id_name": "my-links-friends",
-      "desc": "先链后友",
-      "link_list": []
-    },
-    {
-      "id_name": "special-links",
-      "desc": "特殊链接",
-      "link_list": [
-        {
-          "name": "异次元之旅",
-          "intro": "我们一起去萌站成员的星球旅行吧！",
-          "link": "https://travel.moe/go.html",
-          "avatar": "https://icp.gov.moe/images/ico400.png"
-        },
-        {
-          "name": "开往",
-          "intro": "随机前往开往的成员博客",
-          "link": "https://www.travellings.cn/go-robots.html",
-          "avatar": "https://www.travellings.cn/assets/travelling.png"
-        }
-      ]
-    }
-  ]
+	"friends": [
+		{
+			"id_name": "my-favorite-links",
+			"desc": "个人收藏",
+			"link_list": [
+				{
+					"name": "Axi's Blog",
+					"intro": "一只可爱小猫",
+					"link": "https://axi404.top",
+					"avatar": "https://axi404.top/avatar/avatar.png"
+				},
+				{
+					"name": "霞の葉間",
+					"intro": "光と言葉の狭間",
+					"link": "https://kasuha.com",
+					"avatar": "https://kasuha.com/avatar.webp"
+				},
+				{
+					"name": "茶栗栗屋",
+					"intro": "茶栗的碎碎念",
+					"link": "https://chariri.moe/",
+					"avatar": "https://avatars.githubusercontent.com/u/6622592"
+				},
+				{
+					"name": "Yukitoha 站站站",
+					"intro": "v0.13 ... 能跑就行了吧？",
+					"link": "https://vescrity.github.io/",
+					"avatar": "https://gravatar.com/avatar/e11a9ca7d685d7201509d1eaa446c375?size=1024"
+				}
+			]
+		},
+		{
+			"id_name": "my-friends-links",
+			"desc": "先友后链",
+			"link_list": [
+				{
+					"name": "Eric's Blog",
+					"intro": "热爱生活",
+					"link": "https://zhao20060708.github.io",
+					"avatar": "https://zhao20060708.github.io/img/avatar_hu_41742121d310973e.png"
+				},
+				{
+					"name": "n0irzzz's blog",
+					"intro": "NULL",
+					"link": "https://www.yokari.fun/",
+					"avatar": "https://www.yokari.fun/images/avatar.jpg"
+				},
+				{
+					"name": "Mitchell's Homepage",
+					"intro": "living in a simulation",
+					"link": "https://zeyi2.github.io/",
+					"avatar": "https://github.com/ChiyoYuki/chiyoyuki.github.io/blob/main/src/assets/images/default.jpg?raw=true"
+				}
+			]
+		},
+		{
+			"id_name": "my-links-friends",
+			"desc": "先链后友",
+			"link_list": []
+		},
+		{
+			"id_name": "special-links",
+			"desc": "特殊链接",
+			"link_list": [
+				{
+					"name": "异次元之旅",
+					"intro": "我们一起去萌站成员的星球旅行吧！",
+					"link": "https://travel.moe/go.html",
+					"avatar": "https://icp.gov.moe/images/ico400.png"
+				},
+				{
+					"name": "开往",
+					"intro": "随机前往开往的成员博客",
+					"link": "https://www.travellings.cn/go-robots.html",
+					"avatar": "https://www.travellings.cn/assets/travelling.png"
+				}
+			]
+		}
+	]
 }
