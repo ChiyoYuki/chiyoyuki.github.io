@@ -4,7 +4,7 @@ published: 2025-10-25T21:00:00+08:00
 updated: 2025-11-09T01:40:20+08:00
 description: "你好，Fuwari"
 image: "./cover.jpg"
-tags: ["2025Autumn"]
+tags: ["55Autumn"]
 category: "周记"
 draft: false
 lang: ""
