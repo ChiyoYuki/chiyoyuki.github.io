@@ -21,6 +21,16 @@
       "https://gravatar.com/avatar/e11a9ca7d685d7201509d1eaa446c375?size=1024"
     ],
     [
+      "静かな森",
+      "https://innei.in/",
+      "https://cdn.jsdelivr.net/gh/Innei/static@master/avatar.png"
+    ],
+    [
+      "Arthals' ink",
+      "https://arthals.ink/",
+      "https://cdn.arthals.ink/Arthals.png"
+    ],
+    [
       "Eric's Blog",
       "https://zhao20060708.github.io",
       "https://zhao20060708.github.io/img/avatar_hu_41742121d310973e.png"
@@ -33,7 +43,7 @@
     [
       "Mitchell's Homepage",
       "https://zeyi2.github.io/",
-      ""
+      "https://raw.githubusercontent.com/ChiyoYuki/chiyoyuki.github.io/refs/heads/main/src/assets/images/default.jpg"
     ]
   ]
 }

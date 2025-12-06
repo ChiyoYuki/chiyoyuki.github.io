@@ -27,7 +27,19 @@
 					"intro": "v0.13 ... 能跑就行了吧？",
 					"link": "https://vescrity.github.io/",
 					"avatar": "https://gravatar.com/avatar/e11a9ca7d685d7201509d1eaa446c375?size=1024"
-				}
+				},
+        {
+          "name": "静かな森",
+          "intro": "致虚极，守静笃。",
+          "link": "https://innei.in/",
+					"avatar": "https://cdn.jsdelivr.net/gh/Innei/static@master/avatar.png"
+        },
+        {
+          "name": "Arthals' ink",
+          "intro": "所见高山远木，阔云流风；所幸岁月盈余，了无拘束",
+          "link": "https://arthals.ink/",
+					"avatar": "https://cdn.arthals.ink/Arthals.png"
+        }
 			]
 		},
 		{

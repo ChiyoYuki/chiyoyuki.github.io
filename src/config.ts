@@ -105,7 +105,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "e-mail",
 			icon: "material-symbols:mail",
-			url: "mailto:yuki@chiyo.uk",
+			url: "mailto:chiyo.uk@outlook.com",
 		},
 	],
 };
