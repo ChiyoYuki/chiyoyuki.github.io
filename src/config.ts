@@ -95,7 +95,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "rss",
 			icon: "material-symbols:rss-feed",
-			url: "./rss.xml",
+			url: "/rss.xml",
 		},
 		{
 			name: "Misskey",
