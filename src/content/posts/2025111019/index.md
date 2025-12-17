@@ -6,7 +6,7 @@ description: "某人懒了，上周没写，两周合一周"
 image: "./cover.png"
 tags: ["55Autumn", "55Winter"]
 category: "周记"
-draft: true
+draft: false
 lang: ""
 ---
 
