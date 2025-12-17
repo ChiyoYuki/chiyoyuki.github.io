@@ -2,9 +2,9 @@
 title: "Times"
 published: 2025-12-05T20:15:05+08:00
 updated: 2025-12-05T20:15:05+08:00
-description: "~~闲暇~~ 繁忙之余弄的小玩具"
+description: "闲暇（？）之余弄的小玩具"
 image: "./bg-light.webp"
-tags: ["RSS", "学校", "MinUs"]
+tags: ["RSS", "华夏", "MinUs"]
 category: "折腾"
 draft: false
 lang: ""
@@ -59,7 +59,7 @@ lang: ""
 
 ~~fuwari 怎么没有 mermaid 支持草~~
 
-```ascii
+```
                                 -----------------
 ---------------------  RSSHub   |     .xml      |
 | School's websites |---------->|      on       |
