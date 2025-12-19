@@ -2,10 +2,10 @@ import Key from "../i18nKey";
 import type { Translation } from "../translation";
 
 export const zh_CN: Translation = {
-	[Key.home]: "主页",
-	[Key.about]: "关于",
-	[Key.archive]: "归档",
-	[Key.search]: "搜索",
+	[Key.home]: "家",
+	[Key.about]: "我",
+	[Key.archive]: "档",
+	[Key.search]: "查",
 
 	[Key.tags]: "标签",
 	[Key.categories]: "分类",
@@ -36,6 +36,6 @@ export const zh_CN: Translation = {
 	[Key.publishedAt]: "发布于",
 	[Key.license]: "许可协议",
 
-	[Key.friends]: "友链",
-	[Key.notes]: "笔记",
+	[Key.friends]: "友",
+	[Key.notes]: "记",
 };

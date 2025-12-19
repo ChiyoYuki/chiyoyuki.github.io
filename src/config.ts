@@ -47,12 +47,12 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Friends,
 		{
 			icon: "fa6-solid:tv",
-			name: "ACGN",
+			name: "宅",
 			url: "/bangumi/",
 		},
 		{
 			icon: "fa6-solid:comment",
-			name: "随记",
+			name: "言",
 			url: "/fediverse/",
 		},
 		LinkPreset.Notes,
