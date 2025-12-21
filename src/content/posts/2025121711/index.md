@@ -1,12 +1,12 @@
 ---
-title: "从单位元开始的MIL: C02 Basics"
+title: "MIL: C02 Basics"
 published: 2025-12-17T11:26:05+08:00
 updated: 2025-12-17T11:26:05+08:00
 description: ""
 image: ""
 tags: ["lean", "数学"]
 category: "学习"
-draft: true
+draft: false
 lang: ""
 ---
 
@@ -905,3 +905,4 @@ example (x y : X) : 0 ≤ dist x y :=by
     apply dist_triangle
   linarith [dist_comm x y]
 ```
+
