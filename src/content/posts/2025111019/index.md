@@ -4,8 +4,8 @@ published: 2025-11-10T19:23:33+08:00
 updated: 2025-11-16T22:45:10+08:00
 description: "某人懒了，上周没写，两周合一周"
 image: "./cover.png"
-tags: ["55Autumn", "55Winter"]
-category: "周记"
+tags: ["55"]
+category: "总结"
 draft: false
 lang: ""
 ---

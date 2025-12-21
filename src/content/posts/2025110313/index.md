@@ -4,8 +4,8 @@ published: 2025-11-03T13:09:03+08:00
 updated: 2025-11-09T01:39:03+08:00
 description: "要记得学数学啊！"
 image: "cover.png"
-tags: ["55Autumn"]
-category: "周记"
+tags: ["55"]
+category: "总结"
 draft: false
 lang: ""
 ---
