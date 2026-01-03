@@ -30,7 +30,7 @@ function getDateDir() {
 	const day = String(now.getDate()).padStart(2, "0");
 	const hours = String(now.getHours()).padStart(2, "0");
 
-	return `${year}${month}${day}${hours}`;
+	return `${year}/${month}/${day}${hours}`;
 }
 
 const args = process.argv.slice(2);
