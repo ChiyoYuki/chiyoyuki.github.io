@@ -23,6 +23,7 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		icon: "fa6-solid:note-sticky",
 		name: i18n(I18nKey.notes),
 		url: "https://note.chiyo.uk",
+		external: true,
 	},
 	[LinkPreset.Friends]: {
 		icon: "fa6-solid:user-group",

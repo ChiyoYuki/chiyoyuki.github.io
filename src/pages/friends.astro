@@ -12,39 +12,39 @@ import FriendList from "@/components/links/FriendsList.astro";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
 
 const headings = [
-  { depth: 2, slug: "common-links", text: "Common Links" },
-  { depth: 2, slug: "special-links", text: "Special Links" },
-  { depth: 2, slug: "apply-links", text: "Apply Links" },
+	{ depth: 2, slug: "common-links", text: "Common Links" },
+	{ depth: 2, slug: "special-links", text: "Special Links" },
+	{ depth: 2, slug: "apply-links", text: "Apply Links" },
 ];
 
 const { friends } = links;
 // const linksConf = config.integ.links
 const linksConf = {
-  // Friend logbook
-  logbook: [
-    { date: "2025-03-16", content: "Is there a leakage?" },
-    { date: "2025-03-16", content: "A leakage of what?" },
-    {
-      date: "2025-03-16",
-      content: "I have a full seat of water, like, full of water!",
-    },
-    { date: "2025-03-16", content: "Must be the water." },
-    { date: "2025-03-16", content: "Let's add that to the words of wisdom." },
-  ],
-  // Yourself link info
-  applyTip: [
-    { name: "Name", val: "空と海" },
-    { name: "Desc", val: "就算活著沒有意義，偶而還是會碰到好事的。" },
-    { name: "Link", val: "https://blog.chiyo.uk" },
-    {
-      name: "Avatar",
-      val: "https://cravatar.com/avatar/fe2fa5aa94539c33c4db5526046be86a8ac6bd14e4294fabb809fafaa4ed18c8?size=1024",
-    },
-  ],
+	// Friend logbook
+	logbook: [
+		{ date: "2025-03-16", content: "Is there a leakage?" },
+		{ date: "2025-03-16", content: "A leakage of what?" },
+		{
+			date: "2025-03-16",
+			content: "I have a full seat of water, like, full of water!",
+		},
+		{ date: "2025-03-16", content: "Must be the water." },
+		{ date: "2025-03-16", content: "Let's add that to the words of wisdom." },
+	],
+	// Yourself link info
+	applyTip: [
+		{ name: "Name", val: "空と海" },
+		{ name: "Desc", val: "就算活著沒有意義，偶而還是會碰到好事的。" },
+		{ name: "Link", val: "https://blog.chiyo.uk" },
+		{
+			name: "Avatar",
+			val: "https://cravatar.com/avatar/fe2fa5aa94539c33c4db5526046be86a8ac6bd14e4294fabb809fafaa4ed18c8?size=1024",
+		},
+	],
 };
 
 const linkEditPage =
-  "https://raw.githubusercontent.com/ChiyoYuki/chiyoyuki.github.io/refs/heads/main/public/links.json";
+	"https://raw.githubusercontent.com/ChiyoYuki/chiyoyuki.github.io/refs/heads/main/public/links.json";
 ---
 
 <MainGridLayout
