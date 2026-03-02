@@ -79,8 +79,8 @@ Hi! I'm `Yuki Chiyo`. You can also call me `=>` or something else...I'm not good
 - 时：采用 30 小时制，如无特殊注明，
   文章中提及日期的时区均为 `Asia/Shanghai`。
 
-## 最近在做什么？
+## 看看课表？
 
 喏
 
-<iframe src="https://calendar.google.com/calendar/embed?height=900&wkst=1&ctz=Asia%2FShanghai&mode=WEEK&hl=zh_CN&title=%E8%87%AA%E4%B9%A0%2F%E6%91%B8%E9%B1%BC%E8%AE%B0%E5%BD%95&src=NmQ0MmI1Y2RkMzEwN2Q1Yzk3NGJlZDA5YjE2OGIwMTA3ZGRmODY5YzM0YTkxYWNkNjU1OWM5NTdjZGRkOGZmNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%234285f4" style="border:solid 1px #777" width="900" height="900" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=800&wkst=1&ctz=Asia%2FShanghai&title=%E8%AF%BE%E8%A1%A8&hl=zh_CN&src=N2Y5NjBmODMyZDIwOGUyMDhmZmQxN2MzZWFjZDlhNThlNWMyYTQ5YWMwMzkzYTMwZjExMzhlN2Y1OTQ4ZWU3MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%2339c5bb" style="border:solid 1px #777" width="800" height="800" frameborder="0" scrolling="no"></iframe>
