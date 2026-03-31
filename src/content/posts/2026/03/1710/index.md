@@ -1,7 +1,7 @@
 ---
 title: 水杉空间
 published: 2026-03-17T10:28:24+08:00
-updated: 2026-03-17T10:28:24+08:00
+updated: 2026-03-31T15:25:30+08:00
 description: "让我再试一次……"
 image: "./cover.png"
 tags: ["Misskey", "SNS"]
@@ -11,6 +11,9 @@ lang: ""
 ---
 
 # 水杉空间：基于 Misskey 的校内 SNS 实现
+
+> [!NOTE]
+> 这篇文章尚未完成，最近不是很有劲头，所以大概会持续完善
 
 ::github{repo="misskey-dev/misskey"}
 
